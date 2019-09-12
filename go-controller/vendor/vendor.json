@@ -573,6 +573,12 @@
 			"revisionTime": "2019-09-11T09:57:14Z"
 		},
 		{
+			"checksumSHA1": "UcahVbxaRZ35Wh58lM9AWEbUEts=",
+			"path": "github.com/prometheus/client_golang/prometheus/promhttp",
+			"revision": "7cf0ee13b0be25e3348435c3768bf716b0bf093a",
+			"revisionTime": "2019-09-11T09:57:14Z"
+		},
+		{
 			"checksumSHA1": "V8xkqgmP66sq2ZW4QO5wi9a4oZE=",
 			"path": "github.com/prometheus/client_model/go",
 			"revision": "14fe0d1b01d4d5fc031dd4bec1823bd3ebbe8016",
