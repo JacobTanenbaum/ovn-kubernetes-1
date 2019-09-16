@@ -69,6 +69,8 @@ func setupOVNNode(nodeName string) error {
 			config.Default.InactivityProbe),
 		fmt.Sprintf("external_ids:hostname=\"%s\"", nodeName),
 	)
+
+	startMetricsServer("0.0.0.0:9101")
 	if err != nil {
 		return fmt.Errorf("error setting OVS external IDs: %v\n  %q", err, stderr)
 	}
@@ -82,5 +84,6 @@ func setupOVNMaster(nodeName string) error {
 			return err
 		}
 	}
+	startMetricsServer("0.0.0.0:9101")
 	return nil
 }
