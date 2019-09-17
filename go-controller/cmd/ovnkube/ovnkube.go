@@ -205,6 +205,11 @@ func runOvnKube(ctx *cli.Context) error {
 		return nil
 	}
 
+	//start the prometheus server
+	metricsBindAddress := ctx.String("metrics-bind-address")
+	if metricsBindAddress != "" {
+		ovncluster.StartMetricsServer(metricsBindAddress)
+	}
 	if master != "" || node != "" {
 		if master != "" {
 			if runtime.GOOS == "windows" {

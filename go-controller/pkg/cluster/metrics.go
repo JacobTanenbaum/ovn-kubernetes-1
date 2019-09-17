@@ -11,7 +11,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
-func startMetricsServer(bindAddress string) {
+func StartMetricsServer(bindAddress string) {
 	mux := http.NewServeMux()
 	mux.Handle("/metrics", promhttp.Handler())
 	go utilwait.Until(func() {

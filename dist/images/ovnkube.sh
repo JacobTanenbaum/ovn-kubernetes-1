@@ -890,6 +890,7 @@ start_ovn () {
       --cluster-subnets ${net_cidr} --k8s-service-cidr=${svc_cidr} \
       --nb-address=${ovn_nbdb} --sb-address=${ovn_sbdb} \
       --nodeport \
+      --metrics-bind-address="0.0.0.0:9102" \
       --loglevel=${ovnkube_loglevel} \
       --pidfile /var/run/openvswitch/ovnkube-master.pid \
       --logfile /var/log/ovn-kubernetes/ovnkube-master.log &
@@ -918,6 +919,7 @@ start_ovn () {
       --loglevel=${ovnkube_loglevel} \
       --gateway-mode=${ovn_gateway_mode} ${ovn_gateway_opts}  \
       --pidfile /var/run/openvswitch/ovnkube.pid \
+      --metrics-bind-address="0.0.0.0:9101" \
       --logfile /var/log/ovn-kubernetes/ovnkube.log &
 
   echo "=============== done starting daemons ================="
